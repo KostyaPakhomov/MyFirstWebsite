@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="Images/fav.png" type="image/png">
+    <meta charset="UTF-8">
+    <title>Галерея</title>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Comfortaa|Cormorant+Infant|Cuprum|EB+Garamond|IBM+Plex+Sans|Kurale|Lobster|M+PLUS+Rounded+1c|Montserrat+Alternates|Noto+Sans+SC|Pattaya|Poiret+One|Vollkorn&display=swap"
+          rel="stylesheet">
+    <!--шрифты
+    font-family: 'Comfortaa', cursive;
+    font-family: 'EB Garamond', serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Vollkorn', serif;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Cuprum', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Bad Script', cursive;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Pattaya', sans-serif;
+    font-family: 'Cormorant Infant', serif;
+    font-family: 'Kurale', serif;
+    font-family: 'Lobster', cursive;
+    -->
+    <link rel="stylesheet" href="Style/Style.css" type="text/css"/>
+    <style>
+
+        .FIRST {
+            text-align: center;
+            position: relative;
+            z-index: 0;
+        }
+        .ALL {
+            width: 1050px; height: auto;
+            display: inline-block;
+            position: relative; /*background-color:#75DAFF;*/
+            background: url("Images/gal.jpg") no-repeat top center;
+            background-size: 1050px auto;
+            background-color: rgba(60, 190, 230, 0.7); z-index: 1;
+        }
+
+        .logo {
+            position: absolute;
+            right: 50px; top: 0px;
+            width: 150px; height: 150px;
+        }
+
+        .vk {
+            position: absolute;
+            right: 300px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -96px -11px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+
+        }
+        .fb {
+            position: absolute;
+            right: 250px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -135px -51px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .inst {
+            position: absolute;
+            right: 200px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -91px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .twit {
+            position: absolute;
+            right: 150px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -51px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .ok {
+            position: absolute;
+            right: 100px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -11px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .yt {
+            position: absolute;
+            right: 50px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -58px -172px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+
+        .mainText {
+            font: bold 19px 'Kurale', serif;
+            color: lightslategrey;
+            text-shadow: 0px 0px 10px white;
+            padding: 250px 50px 0px 50px;
+            text-align: justify;
+            line-height: 10mm;
+            text-align: center;
+        }
+        .mainText>h3 {
+            text-align: center;
+            font: bold 50px 'Cormorant Infant', serif;
+
+        }
+
+        #toTop {
+            position: fixed;
+            background: url("Images/ontop.png");
+            width: 84px; height: 82px;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            right: 12px; bottom: 10px;
+            border: 0;
+        }
+
+        @media only all and (max-width: 1075px) {
+
+            .ALL {width: 100%; height: auto; background-color: rgba(70, 130, 180, 0.7); z-index: 1;}
+
+            body div.mainText {padding-top: 250px;}
+            .logo {width: 90px; height: 90px;}
+
+
+            html body .mainText .SCont2>img {width: 100%; margin-left: 0%;
+                transform: none; border-radius: 10px;}
+
+
+            .vk {
+                right: 300px; bottom: 30px;
+            }
+            .fb {
+                right: 250px; bottom: 30px;
+            }
+            .inst {
+                right: 200px; bottom: 30px;
+            }
+            .twit {
+                right: 150px; bottom: 30px;
+            }
+            .ok {
+                right: 100px; bottom: 30px;
+            }
+            .yt {
+                right: 50px; bottom: 30px;
+            }
+
+
+            #toTop {
+                background: url("Images/ontop2.png");
+                width: 43px; height: 41px;
+                background-position: -41px 0px;
+                z-index: 10;}
+
+        }
+
+        .mainText>span {display:block; text-align: center;}
+
+        .SCont2 > img { width: 420px; margin: 30px; transition: transform 0.5s; border-radius: 50px; }
+        .SCont2 > img:hover { transform: scale(1.4); border-radius: 10px; width: 650px; }
+        .mainText>.SCont2 {display:block; text-align: center;}
+        .VIDEO {width: 450px; height:360px; overflow-y: scroll; display: inline-block;}
+        iframe {border-radius: 10px;}
+
+
+    </style>
+</head>
+<div class="FIRST">
+
+    <div class="ALL">
+        <div class="hiddenMenu">
+            <nav role="navigation">
+                <ul>
+                    <!--<li><a href="#">One</a></li>-->
+                    <li>MENU
+                        <ul class="dropdown">
+                            <li><a href="index.html" title="Домашняя страница">Главная</a></li>
+                            <li><a href="Holydays.html" title="Мероприятия на 1000-летие Бреста">Празднование 1000-летия</a></li>
+                            <li><a href="History.html" title="История Бреста">История Бреста</a></li>
+                            <li><a href="Gallery.html" title="Фото и видео с 1000-летия Бреста">Галерея</a></li>
+                            <li><a href="Contacts.html" title="Карта Бреста с достопримечательностями и контакты">Карта города и контакты</a></li>
+                        </ul>
+                    </li>
+                    <!--<li><a href="#">Three</a></li>-->
+                </ul>
+            </nav>
+        </div>
+        <div class="onTop">
+            <div id="toTop"  title="К началу страницы" alt="К началу страницы"></div>
+            <script src="http://webmastermix.ru/media/jui/js/jquery.min.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    $(window).scroll(function() {
+                        if($(this).scrollTop() != 0) {
+                            $('#toTop').fadeIn();
+                        } else {
+                            $('#toTop').fadeOut();
+                        }
+                    });
+
+                    $('#toTop').click(function() {
+                        $('body,html').animate({scrollTop:0},300);
+                    });
+                });
+            </script>
+        </div>
+
+        <img class="logo" src="Images/milleniumbrest.png" title="Логотип к 1000-летию Бреста"
+             alt="Логотип к 1000-летию Бреста">
+        <div class="mainText">
+            <h3>Галерея</h3>
+            <div class="VIDEO"><iframe width="400" height="300" src="https://youtube.com/embed/AVrZhhoJVr0" frameborder="0" allowfullscreen >
+            </iframe>
+                <a href="https://youtu.be/AVrZhhoJVr0" target="a" title="Карнавал в Бресте. Часть 1">Смотреть на YouTube</a><br/><br/>
+                <iframe width="400" height="300" src="https://www.youtube.com/embed/L9gvOTiqwyU" frameborder="0" allowfullscreen >
+                </iframe>
+                <a href="https://youtu.be/L9gvOTiqwyU" target="b" title="Карнавал в Бресте. Часть 1">Смотреть на YouTube</a><br/><br/>
+                <iframe width="400" height="300" src="https://www.youtube.com/embed/n8DXI_JSX-Y" frameborder="0" allowfullscreen >
+                </iframe>
+                <a href="https://youtu.be/n8DXI_JSX-Y" target="c" title="Брест. Рота почётного караула">Смотреть на YouTube</a><br/><br/>
+                <iframe width="400" height="300" src="https://www.youtube.com/embed/wQfY0_s13kY" frameborder="0" allowfullscreen >
+                </iframe>
+                <a href="https://youtu.be/wQfY0_s13kY" target="d" title="Брест. Салют">Смотреть на YouTube</a><br/><br/>
+            </div>
+            <div class=SCont2>
+                <img src="Images/1.jpg" title="Фото с карнавала. Дамы." alt="Фото с карнавала. Дамы.">
+                <img src="Images/2.jpg" title="Фото с карнавала. Люди." alt="Фото с карнавала. Люди."><br/>
+                <img src="Images/3.jpg" title="Фото с карнавала. Блестящий рыцарь." alt="Фото с карнавала. Блестящий рыцарь.">
+                <img src="Images/4.jpg" title="Фото с карнавала. Художник." alt="Фото с карнавала. Художник."><br/>
+                <img src="Images/5.jpg" title="Фото с карнавала. МАЗ." alt="Фото с карнавала. МАЗ.">
+                <img src="Images/6.jpg" title="Фото с карнавала. Салют" alt="Фото с карнавала. Салют">
+            </div>
+        </div>
+
+        <div class="BOTTOM">
+            <div><a class="vk" href="https://vk.com" title="Вконтакте" target="vk"></a></div>
+            <div><a class="fb" href="https://www.facebook.com" title="Facebook" target="fb"></a></div>
+            <div><a class="inst" href="https://www.instagram.com/?hl=ru" title="Instagram" target="inst"></a></div>
+            <div><a class="twit" href="https://twitter.com/?lang=ru" title="Twitter" target="twit"></a></div>
+            <div><a class="ok" href="https://ok.ru" title="Одноклассники" target="ok"></a></div>
+            <div><a class="yt" href="https://www.youtube.com" title="YouTube" target="yt"></a></div>
+            <div class="copyRight">&copy;Pakhomov Konstantin ОЦ ПВТ</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

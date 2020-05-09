@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="Images/fav.png" type="image/png">
+    <meta charset="UTF-8">
+    <title>Брест-1000лет!</title>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Comfortaa|Cormorant+Infant|Cuprum|EB+Garamond|IBM+Plex+Sans|Kurale|Lobster|M+PLUS+Rounded+1c|Montserrat+Alternates|Noto+Sans+SC|Pattaya|Poiret+One|Vollkorn&display=swap"
+          rel="stylesheet">
+    <!--шрифты
+    font-family: 'Comfortaa', cursive;
+    font-family: 'EB Garamond', serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Vollkorn', serif;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Cuprum', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Bad Script', cursive;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Pattaya', sans-serif;
+    font-family: 'Cormorant Infant', serif;
+    font-family: 'Kurale', serif;
+    font-family: 'Lobster', cursive;
+    -->
+    <link rel="stylesheet" href="Style/Style.css" type="text/css"/>
+    <style>
+        .FIRST {
+            text-align: center;
+            position: relative;
+            z-index: 0;
+        }
+        .ALL {
+            width: 1050px; height: 2000px;
+            display: inline-block;
+            position: relative; /*background-color:#75DAFF;*/
+            background: url("Images/fon6.jpg") no-repeat top center;
+            background-size: 1050px auto;
+            z-index: 1;
+        }
+        .CONTAINER {
+            display: flex;
+            width: 1000px; height: 400px;
+            margin: 140px 20px 20px 20px;
+        }
+        .MAIN {
+            flex: 0 0 100px;
+            margin-left: 20px;
+            order: 2;
+            border-radius: 40px;
+            width: 750px;}
+        .MENU {
+            flex: 0 0 200px;
+            order: 1;
+            border-radius: 20px;
+            background: url("Images/gerb1.png") no-repeat center center;
+            background-size: 200px 350px;
+        }
+        .LIST {
+            display: inline;
+            font-family: 'Lobster', cursive;
+            list-style-type: none;
+        }
+
+        .LIST li {
+            padding: 10px; margin: 10px;
+            border-radius: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 3px gray;
+            box-shadow: 5px 5px 7px lightgray;
+            background: url("Images/heading-bg.jpg") no-repeat;
+            background-size: 220px 70px;
+            opacity: 0.8;
+        }
+        li:hover>a {color: peachpuff;}
+        li:hover {opacity: 1;}
+        .slider {
+            position: relative;
+            overflow: hidden;
+                 }
+
+        .slider__wrapper {
+            display: flex;
+            transition: transform 1.2s ease;
+        }
+
+        .slider__item {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+
+        }
+
+        .slider__control {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            color: #fff;
+            text-align: center;
+            opacity: 0.5;
+            height: 50px;
+            transform: translateY(-50%);
+            background: rgba(0, 255, 255, .5);
+            /*margin-top: 40px;*/
+        }
+
+        .slider__control:hover,
+        .slider__control:focus {
+            color: #fff;
+            text-decoration: none;
+            outline: 0;
+            opacity: .9;
+        }
+
+        .slider__control_left {
+            left: 0;
+        }
+
+        .slider__control_right {
+            right: 0;
+        }
+
+        .slider__control::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: transparent no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .slider__control_left::before {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        }
+
+        .slider__control_right::before {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+        }
+
+        .slider__item {
+            width: 185px;
+            border-radius: 40px;
+            height: 400px;
+        }
+        .slider__item>div {
+            width: 750px;
+            height: 398px;
+            border-radius: 40px;
+            box-shadow: 0 0 40px whitesmoke inset;
+        }
+        #a {
+            background: url('Images/SliderMain/glvhod.jpg') no-repeat center center;
+        }
+        #b {
+            background: url('Images/SliderMain/holmsvor.jpg') no-repeat center center;
+        }
+        #c {
+            background: url('Images/SliderMain/pam1000.jpg') no-repeat center center;
+        }
+        #d {
+            background: url('Images/SliderMain/gorsad.jpg') no-repeat center center;
+        }
+        #e {
+            background: url('Images/SliderMain/muzbr.jpg') no-repeat center center;
+        }
+        #f {
+            background: url('Images/SliderMain/fontan.jpg') no-repeat center center;
+        }
+        #g {
+            background: url('Images/SliderMain/zhd.jpg') no-repeat center center;
+        }
+        #h {
+            background: url('Images/SliderMain/nab.jpg') no-repeat center center;
+        }
+        #i {
+            background: url('Images/SliderMain/park.jpg') no-repeat center center;
+        }
+        .logo {
+            position: absolute;
+            right: 50px; top: 0px;
+            width: 150px; height: 150px;
+        }
+        #gorod {
+            position: absolute;
+            left: 150px; top: 40px;
+            font-family: 'Lobster', cursive;
+            font-size: 40px; color: steelblue;
+        }
+
+        .mainText {
+            font: bold 19px 'Kurale', serif;
+            color: white;
+            text-shadow :0px 0px 5px black;
+            padding: 10px 50px 0px 50px;
+            text-align: justify;
+        }
+        .mainText>h3 {
+            text-align: center;
+            font: bold 30px 'Cormorant Infant', serif;
+
+        }
+        .firstPhoto {
+            width: 350px; height: 196px;
+            float: right;
+            margin: 10px 0px 0px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px steelblue;
+        }
+        .secondPhoto {
+            width: 350px; height: 196px;
+            float: left;
+            margin: 10px 20px 0px 0px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px steelblue;
+        }
+        .thirdPhoto {
+            width: 350px; height: 196px;
+            float: right;
+            margin: 10px 0px 0px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px steelblue;
+        }
+        #toTop {
+            position: fixed;
+            background: url("Images/ontop.png");
+            width: 84px; height: 82px;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            right: 12px; bottom: 10px;
+            border: 0;
+        }
+        .vk {
+            position: absolute;
+            right: 300px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -96px -11px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+
+        }
+        .fb {
+            position: absolute;
+            right: 250px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -135px -51px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .inst {
+            position: absolute;
+            right: 200px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -91px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .twit {
+            position: absolute;
+            right: 150px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -51px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .ok {
+            position: absolute;
+            right: 100px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -11px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .yt {
+            position: absolute;
+            right: 50px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -58px -172px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+
+        @media only all and (max-width: 1075px) {
+            /*.slider__item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }*/
+            .ALL {width: 100%; height: auto; background-color: rgba(70, 130, 180, 0.7); z-index: 1;}
+            body div#gorod {display:none;}
+            body div.CONTAINER {display: none;}
+            body div.mainText {padding-top: 50px;}
+            .logo {width: 90px; height: 90px;}
+            .firstPhoto {width: 100%; height: 100%;}
+            .secondPhoto {display: none;}
+            .thirdPhoto {display: none;}
+            body .hiddenMenu {visibility: visible;}
+            .vk {
+                right: 300px; bottom: 30px;
+            }
+            .fb {
+                right: 250px; bottom: 30px;
+            }
+            .inst {
+                right: 200px; bottom: 30px;
+            }
+            .twit {
+                right: 150px; bottom: 30px;
+            }
+            .ok {
+                right: 100px; bottom: 30px;
+            }
+            .yt {
+                right: 50px; bottom: 30px;
+            }
+            #toTop {
+                background: url("Images/ontop2.png");
+                width: 43px; height: 41px;
+                background-position: -41px 0px;
+                z-index: 10;}
+
+        }
+/*выпадающее меню*/
+        .hiddenMenu {visibility: hidden;}
+
+    </style>
+</head>
+<div class="FIRST">
+
+<div class="ALL">
+    <div class="hiddenMenu">
+    <nav role="navigation">
+        <ul>
+            <!--<li><a href="#">One</a></li>-->
+            <li>MENU
+                <ul class="dropdown">
+                    <li><a href="index.html" title="Домашняя страница">Главная</a></li>
+                    <li><a href="Holydays.html" title="Мероприятия на 1000-летие Бреста">Празднование 1000-летия</a></li>
+                    <li><a href="History.html" title="История Бреста">История Бреста</a></li>
+                    <li><a href="Gallery.html" title="Фото и видео с 1000-летия Бреста">Галерея</a></li>
+                    <li><a href="Contacts.html" title="Карта Бреста с достопримечательностями и контакты">Карта города и контакты</a></li>
+                </ul>
+            </li>
+            <!--<li><a href="#">Three</a></li>-->
+        </ul>
+    </nav>
+    </div>
+    <div class="onTop">
+        <div id="toTop" title="К началу страницы" alt="К началу страницы"></div>
+        <script src="http://webmastermix.ru/media/jui/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
+        $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+        $('#toTop').fadeIn();
+        } else {
+        $('#toTop').fadeOut();
+        }
+        });
+
+        $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},300);
+        });
+        });
+        </script>
+    </div>
+    <div id="gorod">
+        Городу Бресту 1000 лет!
+    </div>
+    <img class="logo" src="Images/milleniumbrest.png" title="Логотип к 1000-летию Бреста"
+         alt="Логотип к 1000-летию Бреста">
+<div class="CONTAINER">
+    <div class="MAIN">
+        <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__item">
+                    <div id="a" title="Главный вход в Брестскую крепость" alt="Главный вход в Брестскую крепость"></div>
+                </div>
+                <div class="slider__item">
+                    <div id="b" title="Холмские ворота. Брестская крепость" alt="Холмские ворота. Брестская крепость"></div>
+                </div>
+                <div class="slider__item">
+                    <div id="c" title="Памятник тысячелетию Бреста" alt="Памятник тысячелетию Бреста"></div>
+                </div>
+                <div class="slider__item">
+                    <div id="d" title="Вход в &laquo;Городской сад&raquo;" alt=""Вход в &laquo;Городской сад&raquo;""></div>
+                </div>
+                <div class="slider__item">
+                    <div id="e" title="Музей Бреста" alt="Музей Бреста"></div>
+                </div>
+                <div class="slider__item">
+                    <div id="f" title="Танцующий фонтан" alt="Танцующий фонтан"></div>
+                </div>
+                <div class="slider__item">
+                    <div id="g" title="Ж/д вокзал Бреста" alt="Ж/д вокзал Бреста"></div>
+                </div>
+                <div class="slider__item">
+                    <div id="h" title="р.Муховец, ул.Набережная" alt="р.Муховец, ул.Набережная"></div>
+                </div>
+                <div class="slider__item">
+                    <div id="i" title="Парк 1-го Мая" alt="Парк 1-го Мая"></div>
+                </div>
+                <script type="text/javascript" src="lib/slider.js"></script>
+            </div>
+            <a class="slider__control slider__control_left" href="#" role="button"></a>
+            <a class="slider__control slider__control_right" href="#" role="button"></a>
+        </div>
+    </div>
+    <div class="MENU">
+        <ul class="LIST">
+            <li><a href="index.html" title="Домашняя страница">Главная</a></li>
+            <li><a href="Holydays.html" title="Мероприятия на 1000-летие Бреста">Празднование 1000-летия</a></li>
+            <li><a href="History.html" title="История Бреста">История Бреста</a></li>
+            <li><a href="Gallery.html" title="Фото и видео с 1000-летия Бреста">Галерея</a></li>
+            <li><a href="Contacts.html" title="Карта Бреста с достопримечательностями и контакты">Карта города и контакты</a></li>
+        </ul>
+    </div>
+</div>
+    <div class="mainText">
+        <h3>Брест празднует 1000-летний юбилей</h3>
+        <img class="firstPhoto" src="Images/flags.jpg" title="Флажки" alt="Флажки">
+        &emsp; Брест в этом году отмечает свое тысячелетие. Город прошел трудный путь борьбы и побед, многократно разрушался,
+        но каждый раз восставал из руин и вновь расцветал.
+        Праздничные мероприятия в честь юбилея города пройдут 6-8 сентября. Логотипом тысячелетия уже брендирован
+        общественный транспорт, праздничная символика нанесена на витрины магазинов и кафе. На главной пешеходной
+        улице &mdash; Советской &mdash; появился большой баннер для записи поздравлений, где жители и гости города
+        желают Бресту благополучия, процветания, мирного неба и добра, а также благодарят за уют и тепло.
+        На улице Я.Купалы заработал новый фонтан &mdash; такой подарок городу сделал Брестский чулочный комбинат.
+        Также открылось новое здание автовокзала, а журналисты и блогеры высадили березовую аллею в парке 1000-летия
+        Бреста.
+        В честь юбилея белорусские альпинисты подняли флаг Бреста на вершину Сибирь в горах Восточный Саян.
+        Основные праздничные мероприятия состоятся 6-8 сентября более чем на десяти тематических площадках,
+        по всему городу развернутся праздничные ярмарки-продажи.<br/><br/>
+        &emsp; 6 сентября в рамках программы &laquo;юбилейный&raquo; пройдут первый международный детский фестиваль театров
+        и книг, праздник фольклорного искусства &laquo;Таночак&raquo;, смотр-конкурс ведущих игровых программ
+        &laquo;Берасцейскія забаўлянкі&raquo;, будет представлен музыкальный проект &laquo;Город Света&raquo;.
+        Завершится первый праздничный день международным парадом оркестров стран СНГ &laquo;Марш 1000-летия&raquo;.<br/>
+        <img class="secondPhoto" src="Images/fonar.jpg" title="Фонарщик зажигает фонари на ул.Советской"
+             alt="Фонарщик зажигает фонари на ул.Советской">
+        &emsp; Следующий день, 7 сентября, пройдет под лозунгом &laquo;Брест праздничный&raquo;. В храмах Бреста прозвучат
+        молитвы о городе и его жителях, а в полдень христианские храмы устроят колокольный перезвон.
+        В этот день гости праздника увидят выставки ремесленников, народных мастеров, дефиле-показ этнокостюмов
+        &laquo;Модны стыль &mdash; народны тэкстыль&raquo;. На музыкальных площадках выступят творческие коллективы и
+        исполнители из Беларуси, Индии, Франции. На площадке у фонтана будут экспонироваться фотовыставки, а в
+        выставочном зале откроется экспозиция белорусских художников &laquo;АРТ-Брест-1000&raquo;. Брестский
+        хоккейный клуб станет ареной спортивных состязаний, показательных выступлений спортсменов, конно-спортивной
+        школы и игровых конкурсов.
+        Знаковым мероприятием дня обещает стать карнавал. Красочные композиции на передвижных платформах готовят
+        многие субъекты хозяйствования. В театрализованной форме будет отражена тысячелетняя история Бреста.
+        В карнавале примут участие лучшие творческие коллективы города, в национальных костюмах пройдут студенты
+        стран СНГ, участвующие в фестивале Дружбы. Мероприятию добавят колорит музыкальные коллективы из Беларуси,
+        Казахстана, России, Латвии и Польши. В Брест они съедутся на фестиваль оркестров.<br/>
+        <img class="thirdPhoto" src="Images/vokz.jpg" title="Ж/д вокзал Бреста" alt="Ж/д вокзал Бреста">
+        &emsp; В воскресенье, 8 сентября, организаторы праздника &laquo;Брест фестивальный&raquo; предлагают насладиться
+        фестивалями уличных театров, воздушных змеев, красок и семейным праздником &laquo;Любовь есть&raquo;.
+        Также в этот день состоится второй легкоатлетический пробег &laquo;БрестПолуМарафон&raquo;.
+        Планируется, что в праздновании тысячелетия Бреста примут участие более 40 делегаций. С юбилеем города
+        жителей поздравят представители всех областных центров Беларуси, а также побратимы из-за рубежа. Ожидается
+        приезд партнеров из Украины, России, Израиля, Польши, Нидерландов, Болгарии, Германии, Сербии, Гвинеи-Бисау,
+        Словакии, Венгрии, Латвии.
+
+    </div>
+
+    <div class="BOTTOM">
+        <div><a class="vk" href="https://vk.com" title="Вконтакте" target="vk"></a></div>
+        <div><a class="fb" href="https://www.facebook.com" title="Facebook" target="fb"></a></div>
+        <div><a class="inst" href="https://www.instagram.com/?hl=ru" title="Instagram" target="inst"></a></div>
+        <div><a class="twit" href="https://twitter.com/?lang=ru" title="Twitter" target="twit"></a></div>
+        <div><a class="ok" href="https://ok.ru" title="Одноклассники" target="ok"></a></div>
+        <div><a class="yt" href="https://www.youtube.com" title="YouTube" target="yt"></a></div>
+        <div class="copyRight">&copy;Pakhomov Konstantin ОЦ ПВТ</div>
+    </div>
+</div>
+</div>
+</body>
+</html>

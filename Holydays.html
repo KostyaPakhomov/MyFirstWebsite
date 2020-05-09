@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="Images/fav.png" type="image/png">
+    <meta charset="UTF-8">
+    <title>Празднование 1000-летия</title>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Comfortaa|Cormorant+Infant|Cuprum|EB+Garamond|IBM+Plex+Sans|Kurale|Lobster|M+PLUS+Rounded+1c|Montserrat+Alternates|Noto+Sans+SC|Pattaya|Poiret+One|Vollkorn&display=swap"
+          rel="stylesheet">
+    <!--шрифты
+    font-family: 'Comfortaa', cursive;
+    font-family: 'EB Garamond', serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Vollkorn', serif;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Cuprum', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Bad Script', cursive;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Pattaya', sans-serif;
+    font-family: 'Cormorant Infant', serif;
+    font-family: 'Kurale', serif;
+    font-family: 'Lobster', cursive;
+    -->
+    <link rel="stylesheet" href="Style/Style.css" type="text/css"/>
+    <style>
+
+        .FIRST {
+            text-align: center;
+            position: relative;
+            z-index: 0;
+        }
+        .ALL {
+            width: 1050px; height: auto;
+            display: inline-block;
+            position: relative; /*background-color:#75DAFF;*/
+            background: url("Images/programm2.jpg") no-repeat top center;
+            background-size: 1050px auto;
+            background-color: rgba(60, 190, 230, 0.7); z-index: 1;
+        }
+
+        .vk {
+            position: absolute;
+            right: 300px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -96px -11px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+
+        }
+        .fb {
+            position: absolute;
+            right: 250px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -135px -51px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .inst {
+            position: absolute;
+            right: 200px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -91px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .twit {
+            position: absolute;
+            right: 150px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -51px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .ok {
+            position: absolute;
+            right: 100px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -290px -11px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+        .yt {
+            position: absolute;
+            right: 50px; bottom: 20px;
+            background: url('Images/sprite2.png');
+            background-repeat: no-repeat;
+            background-position: -58px -172px;
+            width: 28px; height: 28px;
+            border: 0; border-radius: 5px;
+        }
+
+        .mainText {
+            font: bold 19px 'Kurale', serif;
+            color: black;
+            text-shadow: 0px 0px 5px white;
+            padding: 190px 50px 0px 50px;
+            text-align: justify;
+            line-height: 10mm;
+        }
+        .mainText>h3 {
+            text-align: center;
+            font: italic bold 30px 'Cormorant Infant', serif;
+
+        }
+
+        #toTop {
+            position: fixed;
+            background: url("Images/ontop.png");
+            width: 84px; height: 82px;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            right: 12px; bottom: 10px;
+            border: 0;
+        }
+
+        @media only all and (max-width: 1075px) {
+
+            .ALL {width: 100%; height: auto; background-color: rgba(70, 130, 180, 0.7); z-index: 1;}
+
+            body div.mainText {padding-top: 190px;}
+
+            body .mainText img.programm {width: 100%; margin-left: 0%;}
+
+            .vk {
+                right: 300px; bottom: 30px;
+            }
+            .fb {
+                right: 250px; bottom: 30px;
+            }
+            .inst {
+                right: 200px; bottom: 30px;
+            }
+            .twit {
+                right: 150px; bottom: 30px;
+            }
+            .ok {
+                right: 100px; bottom: 30px;
+            }
+            .yt {
+                right: 50px; bottom: 30px;
+            }
+
+            #toTop {
+                background: url("Images/ontop2.png");
+                width: 43px; height: 41px;
+                background-position: -41px 0px;
+                z-index: 10;}
+
+        }
+
+        img.programm {
+            /*width: 640px; height: 905px;*/
+			margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px steelblue;
+        }
+
+        .mainText>span {display:block; text-align: center;}
+        .mainText img.programm {display: block; margin-left: 18%;}
+        .mainText>.date {display:block; text-align: center; font-size: 25px; color: brown;}
+        .mainText>.nameDay {display:block; text-align: center; font-size: 25px;}
+        .mainText>.place {font-style: italic; font-size: 25px;}
+        .mainText>.time {font-size: 20px;}
+
+    </style>
+</head>
+<div class="FIRST">
+
+    <div class="ALL">
+        <div class="hiddenMenu">
+            <nav role="navigation">
+                <ul>
+                    <!--<li><a href="#">One</a></li>-->
+                    <li>MENU
+                        <ul class="dropdown">
+                            <li><a href="index.html" title="Домашняя страница">Главная</a></li>
+                            <li><a href="Holydays.html" title="Мероприятия на 1000-летие Бреста">Празднование 1000-летия</a></li>
+                            <li><a href="History.html" title="История Бреста">История Бреста</a></li>
+                            <li><a href="Gallery.html" title="Фото и видео с 1000-летия Бреста">Галерея</a></li>
+                            <li><a href="Contacts.html" title="Карта Бреста с достопримечательностями и контакты">Карта города и контакты</a></li>
+                        </ul>
+                    </li>
+                    <!--<li><a href="#">Three</a></li>-->
+                </ul>
+            </nav>
+        </div>
+        <div class="onTop">
+            <div id="toTop" title="К началу страницы" alt="К началу страницы"></div>
+            <script src="http://webmastermix.ru/media/jui/js/jquery.min.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    $(window).scroll(function() {
+                        if($(this).scrollTop() != 0) {
+                            $('#toTop').fadeIn();
+                        } else {
+                            $('#toTop').fadeOut();
+                        }
+                    });
+
+                    $('#toTop').click(function() {
+                        $('body,html').animate({scrollTop:0},300);
+                    });
+                });
+            </script>
+        </div>
+
+        <!--<img class="logo" src="Images/milleniumbrest.png">-->
+        <div class="mainText">
+            <h3>ПРОГРАММА ПРАЗДНИЧНЫХ МЕРОПРИЯТИЙ, ПОСВЯЩЕННЫХ 1000-ЛЕТИЮ БРЕСТА</h3>
+
+            <div class="date">6 сентября 2019 г., пятница</div>
+
+            <div class="nameDay">&laquo;БРЕСТ ЮБИЛЕЙНЫЙ&raquo;</div>
+
+            <div class="place">Брестский театр кукол (ул. Ленина, 56)</div>
+
+            <div class="time"><b>10.00-16.00.</b> «Книжный шкап» &mdash; Первый международный детский фестиваль
+                театров и книг</div>
+
+            <div class="place">Площадь Ленина</div>
+
+            <div class="time"><b>12.00-13.00.</b> Торжественно-праздничное представление, посвященное началу
+                мероприятий по празднованию 1000-летия Бреста</div>
+
+            <div class="place">Брестский областной общественно-культурный центр
+                (ул. Коммунистическая, 1)</div>
+
+            <div class="time"><b>14.00-18.30.</b> Областной праздник фольклорного искусства
+                «Таночак»</div>
+
+            <div class="place">Площадка перед выставочным залом (ул. Советская, 54)</div>
+
+            <div class="time"><b>14.00-18.30.</b> Областной смотр-конкурс ведущих игровых
+                программ «Берасцейскія забаўлянкі»</div>
+
+            <div class="place">Улица Гоголя, площадка у памятника 1000-летию Бреста</div>
+
+            <div class="time"><b>18.00 - 20.30.</b> Международный Парад оркестров стран
+                СНГ «МАРШ 1000-летия»</div>
+
+            <div class="place">Площадь Ленина</div>
+
+            <div class="time"><b>20.00-23.00.</b> Музыкальный проект «Город Света»</div><br/>
+
+            <div class="date">7 сентября 2019 г., суббота</div>
+
+            <div class="nameDay">&laquo;БРЕСТ ПРАЗДНИЧНЫЙ&raquo;</div>
+
+            <div class="place">Улица Гоголя, площадка у памятника 1000-летию Бреста</div>
+
+            <div class="time"><b>10.00-18.00.</b> &laquo;Город Ремесел и народного творчества&raquo;:
+                областной праздник фольклорного искусства &laquo;ТАНОЧАК&raquo;, выставка-продажа
+                изделий мастеров народного творчества Брестской области, игровые программы
+                от победителей областного конкурса</div>
+
+            <div class="time"><b>14.00-15.00.</b> Дефиле-показ этно-костюмов Брестской
+                области &laquo;Модны стыль - народны тэкстыль&raquo;</div>
+
+            <div class="time"><b>15.00-17.00.</b> Гала-концерт творческих коллективов
+                Бреста и гостей города</div>
+
+            <div class="time"><b>18.00-21.00.</b> Международный Парад оркестров стран
+                СНГ &laquo;МАРШ 1000-летия&raquo;</div>
+
+            <div class="place">Улицы Советская и Гоголя</div>
+
+            <div class="time"><b>10.00-17.00.</b> &laquo;Город Торгово-Промышленный&raquo;: праздничные
+                ярмарки-продажи товаров промышленных предприятий, производственных организаций</div>
+
+            <div class="place">Улица Советская, музыкальная площадка</div>
+
+            <div class="time"><b>10.00-14.00.</b> &laquo;Город Талантов&raquo;: концерты
+                творческих коллективов и исполнителей Бреста</div>
+
+            <div class="place">Улица Советская, площадка у фонтана</div>
+
+            <div class="time"><b>10.00-15.00.</b> &laquo;Город Вернисажей&raquo;: выставки
+                работ художников, фотовыставки</div>
+
+            <div class="place">Улица Советская, выставочный зал</div>
+
+            <div class="time"><b>16.00.</b> Открытие выставки белорусских художников
+                «АРТ-Брест-1000»</div>
+
+            <div class="place">Храмы Бреста</div>
+
+            <div class="time"><b>12.00.</b> &laquo;Город Духовный&raquo;: богослужения,
+                колокольные звоны, концерты духовной музыки</div>
+
+            <div class="place">Территория Брестского хоккейного клуба (ул. Московская, 151)</div>
+
+            <div class="time"><b>10.00-14.00.</b> &laquo;Город Спорта&raquo;: спортивные состязания;
+                показательные выступления спортсменов, игровые спортивные конкурсы,
+                презентация видов спорта, чествование спортсменов</div>
+
+            <div class="place">Парк культуры и отдыха, площадки и аллеи</div>
+
+            <div class="time"><b>10.00-18.00.</b> &laquo;Город Детства&raquo;: выставки, фотозоны,
+                игровые программы, аттракционы</div>
+
+            <div class="place">Парк культуры и отдыха, Театр эстрады</div>
+
+            <div class="time"><b>13.00-17.00.</b> &laquo;Город Музыки&laquo;: концерты творческих
+                коллективов Бреста и гостей города</div>
+
+            <div class="time"><b>17.00-20.00.</b> &laquo;Город Золотого возраста&laquo;: танцевальные
+                программы для брестчан «золотого» возраста, регистрация &laquo;золотых браков&raquo;,
+                конкурсы, игровые программы, концерты</div>
+
+            <div class="place">Парк воинов-интернационалистов (м-н Восток)</div>
+
+            <div class="time"><b>10.00-14.00.</b> «Город Детства»: игровые программы,
+                конкурсы, развлечения, аттракционы, концерты, выставки, фотозоны</div>
+
+            <div class="time"><b>17.00-20.00.</b> &laquo;Город Золотого возраста&raquo;: танцевальные
+                программы для брестчан «золотого» возраста, регистрация «золотых браков»,
+                конкурсы, игровые программы, концерты</div>
+
+            <div class="place">Парк 1000-летия Бреста (м-н Вулька)</div>
+
+            <div class="time"><b>13.00-16.00.</b> &laquo;Город #БреСТМолодежный&raquo;: музыкальная
+                и спортивная программы, научно-развлекательные шоу, реконструкция
+                средневекового быта, экологические акции, гонки на гироскутерах,
+                тематические мастер-классы, фотозоны</div>
+
+            <div class="place">Площадка у археологического музея &laquo;Берестье&raquo;</div>
+
+            <div class="time"><b>14.00-18.00.</b> &laquo;Город Древний&laquo;: исторические
+                театрализованные композиции, рыцарские турниры, исторические выставки,
+                работа обновленной экспозиции музея</div>
+
+            <div class="place">Проспект Машерова — улица Ленина</div>
+
+            <div class="time"><b>15.00-17.00.</b> МЕЖДУНАРОДНЫЙ КАРНАВАЛ (Кобринский
+                путепровод - площадь Ленина)</div>
+
+            <div class="place">Площадь Ленина</div>
+
+            <div class="time"><b>17.00-20.00.</b> Концерты творческих коллективов
+                Беларуси и гостей города</div>
+
+            <div class="time"><b>21.00-23.00.</b> Прямая трансляция музыкально-исторической
+                композиции &laquo;Миллениум&laquo; на видеоэкраны</div>
+
+            <div class="place">Гребной канал (ул. Октябрьской революции, 2). Вход
+                свободный. Сидячие места на трибунах по пригласительным.</div>
+
+            <div class="time"><b>21.00-23.00.</b> &laquo;МИЛЛЕНИУМ&raquo; &mdash; музыкально-историческая
+                композиция. Программа будет транслироваться на экране на площади Ленина,
+                а также с 21.00 на телеканалах ОНТ и &laquo;Беларусь 4&raquo;.</div>
+
+            <div class="place">Остров на реке Мухавец (в р-не улиц 28 Июля и Варшавского шоссе)</div>
+
+            <div class="time"><b>23.00.</b> ФЕЙЕРВЕРК</div>
+
+            <div class="date">8 сентября 2019 г., воскресенье</div>
+
+            <div class="nameDay">&laquo;БРЕСТ ФЕСТИВАЛЬНЫЙ&raquo;</div>
+
+            <div class="place">Улица Ленина (площадь Ленина)</div>
+
+            <div class="time"><b>12.00-13.00.</b> Фестиваль Дружбы</div>
+
+            <div class="time"><b>15.00-17.30.</b> Международный Парад оркестров стран
+                СНГ &laquo;МАРШ 1000-летия&raquo;: марш-парад и гала-концерт</div>
+
+            <div class="time"><b>20.00-22.00.</b> Фестиваль уличных театров «Белой Вежи»</div>
+
+            <div class="place">Проспект Республики (у БрГТУ)</div>
+
+            <div class="time"><b>12.00-14.00.</b> Фестиваль воздушных змеев</div>
+
+            <div class="place">Набережная Ф. Скорины</div>
+
+            <div class="time"><b>15.00-22.00.</b> Семейный праздник &laquo;#Любовь есть&laquo;</div>
+
+            <div class="place">Парк культуры и отдыха (ул. Ленина, 3)</div>
+
+            <div class="time"><b>15.00-23.00.</b> Фестиваль красок</div>
+
+            <div class="place">Гребной канал &mdash; улицы города</div>
+
+            <div class="time"><b>09.00-12.00.</b> Второй легкоатлетический пробег
+                &laquo;БрестПолуМарафон&laquo;</div>
+            <img class="programm" src="Images/programm.jpg"
+                 title="Расписание мероприятий празднования 1000-летия Бреста с 6 по 8 сентября"
+            alt="Расписание мероприятий празднования 1000-летия Бреста с 6 по 8 сентября">
+        </div>
+
+        <div class="BOTTOM">
+            <div><a class="vk" href="https://vk.com" title="Вконтакте" target="vk"></a></div>
+            <div><a class="fb" href="https://www.facebook.com" title="Facebook" target="fb"></a></div>
+            <div><a class="inst" href="https://www.instagram.com/?hl=ru" title="Instagram" target="inst"></a></div>
+            <div><a class="twit" href="https://twitter.com/?lang=ru" title="Twitter" target="twit"></a></div>
+            <div><a class="ok" href="https://ok.ru" title="Одноклассники" target="ok"></a></div>
+            <div><a class="yt" href="https://www.youtube.com" title="YouTube" target="yt"></a></div>
+            <div class="copyRight">&copy;Pakhomov Konstantin ОЦ ПВТ</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

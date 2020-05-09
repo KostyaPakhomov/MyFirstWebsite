@@ -1,0 +1,95 @@
+
+		body {background: url(data:image/gif;base64,R0lGODlhGwAbAMQAADByoQxakTR1pC1woCpunxBdkw5bkhNflC9yoS5xoRdhlhFdkxJelBRflQ1bkjFzohZhlilunjN1owtZkQ9ckyxwoDV2pAlYkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAbABsAAAXp4CWOpBhcZ6leVtsKT2SyqBg9gtuKVkmIDlovePmRerRRRWRI0pqX5QiJvAxElCT1krVOeaIEVrujdcXaC0JUSPe2bXVSAhAt0vje/QKQiOoXDHllW4J8JAduQos0iSQNbm9CkjSQIhB4X1VgNJgKgy4sOpwCF59UoyuioV6nnDpvqUhLn5hbR06cS5gikFs7ksAiS5Yjib+LlEsHXYeBoLqBFBOAdHZ50QtZfWBrF23Is99Za7doWajiFFlot15ceEvr75lRTE5LBllSrz5AF6WWOJhm5MuqFzFmLElxI0cqVSNOpIB4IQQAOw==);}
+		
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+        .BOTTOM {
+            position: absolute;
+            left: 0px;
+            width: 100%; height: 70px;
+            background: rgba(70, 130, 180, 0.7);
+            margin-top: 17px;
+		}
+
+        .copyRight {
+            position: absolute;
+            left: 70px; bottom: 25px;
+        }
+		/*выпадающее меню*/
+        .hiddenMenu {visibility: visible;}
+        nav {
+            font-family: monospace;
+        }
+
+        nav ul {
+            background: darkorange;
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        nav li {
+            color: #fff;
+            background: darkorange;
+            display: block;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+            border-bottom-right-radius: 20px 20px;
+        }
+
+        nav li a {
+            color: #fff;
+        }
+
+        nav li:hover, li:focus-within {
+            background: red;
+            cursor: pointer;
+        }
+
+        nav li:focus-within a {
+            outline: none;
+        }
+
+        nav ul li ul {
+            background: orange;
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+        nav ul li:hover > ul,
+        nav ul li:focus-within > ul,
+        nav ul li ul:hover,
+        nav ul li ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        nav ul li ul li {
+            clear: both;
+            width: 100%;
+        }
+		
+		 @media only all and (max-width: 1075px) {
+            /*.slider__item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }*/
+			.copyRight {left: 70px; bottom: 5px;}
+            
+
+            .BOTTOM {margin-top: 0px;}
+
+           
